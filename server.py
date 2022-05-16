@@ -44,6 +44,7 @@ def edit_item(no):
         else:
             status = 0
 
+
         conn = sqlite3.connect('todo.db')
         c = conn.cursor()
         c.execute("UPDATE todo SET task = ?, status = ? WHERE id LIKE ?", (edit, status, no))
